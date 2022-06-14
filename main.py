@@ -29,30 +29,15 @@ class TestCalculator(unittest.TestCase):
 
         assert expectedResult == actualResult, 'Result should be 5823'
 
-    def test_add1(self):
-        inputFieldLeft = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/inputFieldLeft')
-        inputFieldRight = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/inputFieldRight')
-        additionButton = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/additionButton')
-        resultTextView = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/resultTextView')
-
-        inputFieldLeft.send_keys('0')
-        inputFieldRight.send_keys('1')
-        additionButton.click()
-
-        expectedResult = '0.00 + 1.00 = 1.00'
-        actualResult = resultTextView.text
-
-        assert expectedResult == actualResult, 'Result should be 1'
-
     def test_subtract(self):
         inputFieldLeft = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/inputFieldLeft')
         inputFieldRight = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/inputFieldRight')
-        additionButton = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/subtractButton')
+        subtractButton = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/subtractButton')
         resultTextView = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/resultTextView')
 
         inputFieldLeft.send_keys('10')
         inputFieldRight.send_keys('5')
-        additionButton.click()
+        subtractButton.click()
 
         expectedResult = '10.00 - 5.00 = 5.00'
         actualResult = resultTextView.text
@@ -62,18 +47,32 @@ class TestCalculator(unittest.TestCase):
     def test_divison(self):
         inputFieldLeft = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/inputFieldLeft')
         inputFieldRight = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/inputFieldRight')
-        additionButton = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/divisionButton')
+        divisionButton = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/divisionButton')
         resultTextView = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/resultTextView')
 
         inputFieldLeft.send_keys('5')
         inputFieldRight.send_keys('0')
-        additionButton.click()
+        divisionButton.click()
 
         expectedResult = '5.00 / 0.00 = Infinity'
         actualResult = resultTextView.text
 
         assert expectedResult == actualResult, 'Result should be Infinity'
 
+    def test_multiplication(self):
+        inputFieldLeft = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/inputFieldLeft')
+        inputFieldRight = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/inputFieldRight')
+        multiplicationButton = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/multiplicationButton')
+        resultTextView = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/resultTextView')
+
+        inputFieldLeft.send_keys('5')
+        inputFieldRight.send_keys('4')
+        multiplicationButton.click()
+
+        expectedResult = '5.00 * 4.00 = 20.00'
+        actualResult = resultTextView.text
+
+        assert expectedResult == actualResult, 'Result should be 20'
+
     def teardown(self):
         self.driver.quit()
-
