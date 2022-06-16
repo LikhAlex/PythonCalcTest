@@ -16,5 +16,5 @@
 6)	Вставляем код и проводим необходимые тесты. 
  
 
-  C баг-репортами можно ознакомиться по ссылке: https://docs.google.com/spreadsheets/d/1NiXLGj-S2Hy7uktdlg8mYbd2W_VLoIqE00fz4rhO4S4/edit#gid=1771347267 
+  C баг-репортами можно ознакомиться по ссылке: https://docs.google.com/spreadsheets/d/1NiXLGj-S2Hy7uktdlg8mYbd2W_VLoIqE00fz4rhO4S4/edit?usp=sharing
 
