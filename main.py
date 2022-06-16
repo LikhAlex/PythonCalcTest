@@ -28,7 +28,11 @@ class TestCalculator(unittest.TestCase):
         actualResult = resultTextView.text
 
         assert expectedResult == actualResult, 'Result should be 5823'
-
+        
+#  Я понимаю, что можно задать несколько параметров для теста в рамках одного метода через parametrize 
+#  или, возможно, статичный метод, но, на данном этапе не смог с этим разобраться
+   
+    
     def test_subtract(self):
         inputFieldLeft = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/inputFieldLeft')
         inputFieldRight = self.driver.find_element(By.ID, 'com.vbanthia.androidsampleapp:id/inputFieldRight')
