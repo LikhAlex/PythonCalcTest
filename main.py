@@ -30,7 +30,7 @@ class TestCalculator(unittest.TestCase):
         assert expectedResult == actualResult, 'Result should be 5823'
         
 #  Я понимаю, что можно задать несколько параметров для теста в рамках одного метода через parametrize 
-#  или, возможно, статичный метод, но, на данном этапе не смог с этим разобраться
+#  или, возможно, статичный метод, но, на данном этапе не смог с этим разобраться, буду пробовать
    
     
     def test_subtract(self):
